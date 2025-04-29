@@ -27,7 +27,7 @@ public class LightBoard
   {
     /* to be implemented in part (b) */
     int n = 0;
-    for(int r = 0; r < lights.length; i++) {
+    for(int r = 0; r < lights.length; r++) {
       if(lights[r][col]) {
         n++;
       }
