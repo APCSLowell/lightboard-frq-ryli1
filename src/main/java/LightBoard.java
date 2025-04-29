@@ -28,7 +28,7 @@ public class LightBoard
     /* to be implemented in part (b) */
     int n = 0;
     for(boolean b : lights[row]) {
-      if(b) {
+      if(b == true) {
         n++;
       }
     }
@@ -36,8 +36,9 @@ public class LightBoard
       return false;
     } else if(!lights[row][col] && n % 3 == 0) {
       return true;
+    } else {
+      return lights[row][col]; 
     }
-    return lights[row][col];
   }
    
   public boolean[][] getLights()
