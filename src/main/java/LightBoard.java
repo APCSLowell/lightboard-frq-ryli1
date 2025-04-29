@@ -32,13 +32,16 @@ public class LightBoard
         n++;
       }
     }
-    if(lights[row][col] && n % 2 == 0) {
-      return false;
-    } else if(!lights[row][col] && n % 3 == 0) {
-      return true;
+    if(lights[row][col]) {
+      if(n % 2 == 0) {
+        return false;
+      }
     } else {
-      return lights[row][col]; 
-    }
+      if(n % 3 == 0) {
+        return true; 
+      }
+    }   
+    return lights[row][col];
   }
    
   public boolean[][] getLights()
