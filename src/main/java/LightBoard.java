@@ -12,9 +12,9 @@ public class LightBoard
   {
     /* to be implemented in part (a) */
     lights = new boolean[numRows][numCols];
-    for(int i = 0; i < numRows; i++) {
-      for(int j = 0; j < numCols; j++) {
-        lights[i][j] = (Math.random() < 0.4);
+    for(int r = 0; r < numRows; r++) {
+      for(int c = 0; c < numCols; c++) {
+        lights[r][c] = (Math.random() < 0.4);
       }
     }
   }
@@ -27,8 +27,8 @@ public class LightBoard
   {
     /* to be implemented in part (b) */
     int n = 0;
-    for(boolean b : lights[row]) {
-      if(b == true) {
+    for(int r = 0; r < lights.length; i++) {
+      if(lights[r][col]) {
         n++;
       }
     }
